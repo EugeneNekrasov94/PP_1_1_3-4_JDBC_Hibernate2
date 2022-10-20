@@ -10,17 +10,20 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-
         UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl();
-        userDaoJDBC.saveUser("Eugene","Nekrasov",  (byte) 28);
-        userDaoJDBC.saveUser("Eugene","Nekrasov",  (byte) 28);
-        userDaoJDBC.saveUser("Eugene","Nekrasov",  (byte) 28);
-        userDaoJDBC.saveUser("Eugene","Nekrasov",  (byte) 28);
+        userDaoJDBC.createUsersTable();
+        userDaoJDBC.saveUser("Kenny","McCormick",  (byte) 10);
+        System.out.println("User с именем Kenny добавлен в базу данных");
+        userDaoJDBC.saveUser("Stan","Marsh",  (byte) 10);
+        System.out.println("User с именем Stan добавлен в базу данных");
+        userDaoJDBC.saveUser("Kyle","Broflovski",  (byte) 9);
+        System.out.println("User с именем Kyle добавлен в базу данных");
+        userDaoJDBC.saveUser("Eric","Cartman",  (byte) 10);
+        System.out.println("User с именем Eric добавлен в базу данных");
         List<User> list = userDaoJDBC.getAllUsers();
         list.forEach(System.out::println);
-        //userDaoJDBC.removeUserById(1);
         userDaoJDBC.cleanUsersTable();
-
+        userDaoJDBC.dropUsersTable();
         // реализуйте алгоритм здесь
     }
 

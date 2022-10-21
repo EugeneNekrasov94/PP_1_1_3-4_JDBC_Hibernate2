@@ -1,13 +1,8 @@
 package jm.task.core.jdbc;
 
-import com.mysql.jdbc.Driver;
 import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
-import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
-import jm.task.core.jdbc.util.Util;
-import org.hibernate.SessionFactory;
 
-import java.sql.*;
 import java.util.List;
 
 public class Main {
